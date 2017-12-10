@@ -2,12 +2,12 @@ $borderBox: 2px solid firebrick;
 
 * {
     font-family: 'Questrial', sans-serif;
-    font-size: 1.7vw;
+    font-size: 1.6vw;
     margin: 0;
 }
 
 body {
-    width: 77%;
+    width: 75%;
     margin: 2em auto;
 }
 
@@ -15,10 +15,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
 }
 
 #menu > div {
     flex-grow: 1;
+    flex-shrink: 1;
     flex-basis: 22%;
     margin: .7em 1em;
     border: $borderBox;
@@ -27,9 +29,8 @@ body {
 }
 
 input[type=number] {
-    font-size: 1em;
+    font-size: 1.7vw;
 }
-
 
 .noneWrap {
     margin: .3em auto;
@@ -47,11 +48,12 @@ input[type=number] {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 1.3em 1em;
+    margin: 1.7vw 1vw;
+    font-size: .9vw;
 }
 
 #menu > div:last-child > .row {
-    margin: 1.3em 2.2em;
+    margin: 2vw 1vw;
 }
 
 #menu > div > div > * {
@@ -70,7 +72,8 @@ h4 {
 #breadWrap {
     margin: 1em auto;
     border: $borderBox;
-    width: 60%;
+    border-radius: 0 0 1em 1em;
+    width: 45%;
 }
 
 #breadWrap h4 {
@@ -81,6 +84,7 @@ h4 {
     display: block;
     margin: .5em auto;
     width: 20vw;
+    height: 3vw;
     font-size: 1.1em;
     text-align: center;
 }
@@ -107,10 +111,12 @@ button {
 }
 
 #total {
+    margin: .5em auto;
     font-size: 2.4em;
+    text-shadow: 1px 0 2px rgba(0, 0, 0, .8);
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1070px) {
     body {
         width: 90%;
     }
@@ -119,5 +125,15 @@ button {
 @media (max-width: 850px) {
     body {
         width: 98%;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        width: 50%;
+        font-size: 3vw;
+    }
+    #menu {
+        flex-direction: column;
     }
 }

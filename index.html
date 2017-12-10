@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sandwich</title>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+    <div id="breadWrap">
+    <h4>Bread:</h4>
+    <select id="bread">
+        <option>white</option>
+        <option>whole wheat</option>
+        <option>whole grain</option>
+        <option>hawaiian</option>
+        <option>italian herb</option>
+    </select>
+    </div>
+
+    <div id="menu">
+        <div id="meat">
+            <h4>Meat:</h4>
+            <section class="noneWrap">
+            <input type="checkbox" class="none">
+            <label for="none">None</label>
+            </section>
+            <div class="row">
+            <input type="checkbox" id="turkey">
+            <label for="turkey">turkey</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="ham">
+            <label for="ham">ham</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="salami">
+            <label for="salami">salami</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="bacon">
+            <label for="bacon">bacon</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="tuna">
+            <label for="tuna">tuna</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+        </div>
+        
+        <div id="cheese">
+            <h4>Cheese:</h4>
+            <section class="noneWrap">
+            <input type="checkbox" class="none">
+            <label for="none">None</label>
+            </section>
+            <div class="row">
+            <input type="checkbox" id="cheddar">
+            <label for="cheddar">cheddar</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="gouda">
+            <label for="gouda">gouda</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="havarti">
+            <label for="havarti">havarti</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="pepperjack">
+            <label for="pepperjack">pepperjack</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="swiss">
+            <label for="swiss">swiss</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+        </div>
+        
+        <div id="veggies">
+            <h4>Veggies:</h4>
+            <section class="noneWrap">
+            <input type="checkbox" class="none">
+            <label for="none">None</label>
+            </section>
+            <div class="row">
+            <input type="checkbox" id="lettuce">
+            <label for="lettuce">lettuce</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="tomato">
+            <label for="tomato">tomato</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="onion">
+            <label for="onion">onion</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="avocado">
+            <label for="avocado">avocado</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+            <div class="row">
+            <input type="checkbox" id="jalapeno">
+            <label for="jalapeno">jalapeno</label>
+            <input type="number" min="1" max="3" value="1">
+            </div>
+        </div>
+        
+        <div id="condiments">
+            <h4>Condiments:</h4>
+            <section class="noneWrap">
+            <input type="checkbox" class="none">
+            <label for="none">None</label>
+            </section>
+            <div class="row">
+            <input type="checkbox" id="mayo">
+            <label for="mayo">mayo</label>
+            </div>
+            <div class="row">
+            <input type="checkbox" id="mustard">
+            <label for="mustard">mustard</label>
+            </div>
+            <div class="row">
+            <input type="checkbox" id="vinegar">
+            <label for="vinegar">vinegar</label>
+            </div>
+            <div class="row">
+            <input type="checkbox" id="oil">
+            <label for="oil">oil</label>
+            </div>
+            <div class="row">
+            <input type="checkbox" id="hot-sauce">
+            <label for="hot-sauce">hot sauce</label>
+            </div>
+        </div>    
+    </div>
+    <div id="totalUp">
+        <button id="sumUp">Ring It Up!!</button>
+        <button id="clearTotal">nah, new sandwich</button>
+        <div id="total"></div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

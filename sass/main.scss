@@ -1,0 +1,123 @@
+$borderBox: 2px solid firebrick;
+
+* {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.7vw;
+    margin: 0;
+}
+
+body {
+    width: 77%;
+    margin: 2em auto;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#menu > div {
+    flex-grow: 1;
+    flex-basis: 22%;
+    margin: .7em 1em;
+    border: $borderBox;
+    border-radius: 0 .7em;
+    padding: .6em auto;
+}
+
+input[type=number] {
+    font-size: 1em;
+}
+
+
+.noneWrap {
+    margin: .3em auto;
+    text-align: center;
+    border-bottom: 1px double gray;
+}
+
+.noneWrap > * {
+    margin: .8em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.3em 1em;
+}
+
+#menu > div:last-child > .row {
+    margin: 1.3em 2.2em;
+}
+
+#menu > div > div > * {
+    display: inline;
+}
+
+h4 {
+    margin-top: .5em;
+    font-size: 2.3vw;
+    text-align: center;
+    border-bottom: $borderBox;
+    padding-bottom: .3em;
+}
+
+
+#breadWrap {
+    margin: 1em auto;
+    border: $borderBox;
+    width: 60%;
+}
+
+#breadWrap h4 {
+    font-size: 1.5em;
+}
+
+#bread {
+    display: block;
+    margin: .5em auto;
+    width: 20vw;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+#totalUp {
+    margin: 1.4em auto;
+    text-align: center;
+}
+
+button {
+    margin: 0 1.5em 1em;
+    font-size: 1.3em;
+    padding: .5em 1.2em;
+    border-radius: .4em;
+    background: linear-gradient(to top right, rgb(204, 197, 103), gold);
+    color: white;
+    text-shadow: .5px 0 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    outline: none;
+}
+
+#sumUp:active {
+    background: linear-gradient(to top right, gold, rgb(190, 188, 201));
+}
+
+#total {
+    font-size: 2.4em;
+}
+
+@media (max-width: 1030px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media (max-width: 850px) {
+    body {
+        width: 98%;
+    }
+}

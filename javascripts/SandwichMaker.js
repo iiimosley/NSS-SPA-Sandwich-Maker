@@ -16,8 +16,6 @@ let clearTotal = document.getElementById("clearTotal");
 let allCheckbox = document.querySelectorAll("input[type=checkbox]");
 let allNumInput = document.querySelectorAll("input[type=number]");
 
-//all checkboxes, no .none class
-// let allButNone = document.querySelectorAll("input[type=checkbox]:not(.none)");
 // all .none checkboxes + event listner & function
 let checkNone = document.querySelectorAll(".none");
 checkNone.forEach((none) => {none.addEventListener("change", deselect);});
@@ -26,19 +24,25 @@ checkNone.forEach((none) => {none.addEventListener("change", deselect);});
 function deselect() {
     let notNone = event.currentTarget.parentNode.parentNode.querySelectorAll("input[type=checkbox]:not(.none)");
     if (event.currentTarget.checked === true) {
-            // console.log(notNone);
-            notNone.forEach(c => {
+        // console.log(notNone);
+        notNone.forEach(c => {
             c.checked = false;
         });
     } 
-    // else {
-    //     notNone.forEach(nN => {
-    //         nN.addEventListener("change", function() {
-    //         console.log(event.currentTarget);
-    //         });
-    //     });
-    // }
 }
+            
+//all checkboxes, no .none class
+let allButNone = document.querySelectorAll("input[type=checkbox]:not(.none)");
+//target ingredient card of ingredient checkbox targeted
+//if ingredient is checked, clear .none checkbox
+allButNone.forEach((nN) => {nN.addEventListener("change", deselectNone);});
+function deselectNone() {
+    let uncheckNone = event.currentTarget.parentNode.parentNode.querySelector(".none");
+    if (event.currentTarget.checked === true) {
+        uncheckNone.checked = false;
+    }
+}
+
 
 addTotal.addEventListener("click", getCost);
 let totalSum;

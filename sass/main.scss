@@ -140,10 +140,15 @@ button:active {
 
 @media (max-width: 640px) {
     body {
-        width: 50%;
-        font-size: 3vw;
+        width: 80%;
     }
     #menu {
         flex-direction: column;
+    }
+    h4, #breadWrap h4  {
+        font-size: 4vw;
+    }
+    .row > * {
+        font-size: 3vw;
     }
 }

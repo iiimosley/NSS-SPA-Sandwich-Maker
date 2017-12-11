@@ -1,4 +1,5 @@
 $borderBox: 2px solid firebrick;
+$cardBkgb: linear-gradient(to top, rgb(225, 237, 241), rgba(249, 251, 252, 0.925));
 
 * {
     font-family: 'Questrial', sans-serif;
@@ -24,8 +25,9 @@ body {
     flex-basis: 22%;
     margin: .7em 1em;
     border: $borderBox;
-    border-radius: 0 .7em;
-    padding: .6em auto;
+    border-radius: 0 1.3vw;
+    padding-top: .6em auto;
+    background: $cardBkgb;
 }
 
 input[type=number] {
@@ -61,16 +63,24 @@ input[type=number] {
 }
 
 h4 {
-    margin-top: .5em;
     font-size: 2.3vw;
     text-align: center;
     border-bottom: $borderBox;
+    border-top-right-radius: 1vw;
+    padding-top: .5em;
     padding-bottom: .3em;
+    background: linear-gradient(to top right, rgb(97, 14, 33), rgba(99, 9, 30, .7));
+    color: white;
+}
+
+#breadWrap h4 {
+    border-radius: 0;
 }
 
 
 #breadWrap {
     margin: 1em auto;
+    background: $cardBkgb;
     border: $borderBox;
     border-radius: 0 0 1em 1em;
     width: 45%;
@@ -99,15 +109,15 @@ button {
     font-size: 1.3em;
     padding: .5em 1.2em;
     border-radius: .4em;
-    background: linear-gradient(to top right, rgb(204, 197, 103), gold);
+    background: linear-gradient(to top right, rgb(219, 183, 0), gold);
     color: white;
     text-shadow: .5px 0 3px rgba(0, 0, 0, 1);
     cursor: pointer;
     outline: none;
 }
 
-#sumUp:active {
-    background: linear-gradient(to top right, gold, rgb(190, 188, 201));
+button:active {
+    background: linear-gradient(to top right, rgb(219, 183, 0), rgb(190, 188, 201));
 }
 
 #total {

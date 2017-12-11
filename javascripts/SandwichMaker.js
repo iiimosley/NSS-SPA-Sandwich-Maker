@@ -1,35 +1,51 @@
 'use strict';
 
+//ingredient modules
 const bread = require('./bread');
 const cheese = require('./cheese');
 const condiments = require('./condiments');
 const meat = require('./meat.js');
 const veggies = require('./veggies.js');
 
+//output div
 let totalCost = document.getElementById("total");
+//get total & clear total buttons
 let addTotal = document.getElementById("sumUp");
 let clearTotal = document.getElementById("clearTotal");
+//all checkboxes & number inputs
 let allCheckbox = document.querySelectorAll("input[type=checkbox]");
 let allNumInput = document.querySelectorAll("input[type=number]");
 
-//expt checkbox ".none" unchecking all other check boxes when checked
-//
-// let uncheckNone = document.querySelectorAll(".none");
-// let notNone = document.querySelectorAll("input[type=checkbox]:not(.none)");
-// uncheckNone.forEach((none) => {none.addEventListener("click", deselect);});
-// console.log(notNone);
-
-// function deselect() {
-//     if (uncheckNone.checked === true) {
-//         notNone.forEach(c => {
-//             c.checked = false;
-//         });
-//     }
-// }
+//all checkboxes, no .none class
+// let allButNone = document.querySelectorAll("input[type=checkbox]:not(.none)");
+// all .none checkboxes + event listner & function
+let checkNone = document.querySelectorAll(".none");
+checkNone.forEach((none) => {none.addEventListener("change", deselect);});
+//target ingredient card for .none checkbox targeted
+//if none is checked, clear all other checkboxes (notNone)
+function deselect() {
+    let notNone = event.currentTarget.parentNode.parentNode.querySelectorAll("input[type=checkbox]:not(.none)");
+    if (event.currentTarget.checked === true) {
+            // console.log(notNone);
+            notNone.forEach(c => {
+            c.checked = false;
+        });
+    } 
+    // else {
+    //     notNone.forEach(nN => {
+    //         nN.addEventListener("change", function() {
+    //         console.log(event.currentTarget);
+    //         });
+    //     });
+    // }
+}
 
 addTotal.addEventListener("click", getCost);
 let totalSum;
 
+//call function for each module/ingredient's total cost
+//concat together arrays of each ingredient's cost
+//accumulate total cost all ingredients for sandwich
 function getCost() {
     meat.addMeat();
     cheese.addCheese();
@@ -41,9 +57,9 @@ function getCost() {
     totalCost.innerHTML = "$" + (totalSum.reduce((total, number) => +total + (+number), 0)).toFixed(2);
 }
 
+//clear button listener and function
 clearTotal.addEventListener("click", clearOut);
-
-
+//clear output div, all arrays holding key values, & all checkboxes+number input
 function clearOut() {
     totalCost.innerHTML = "";
     meat.meatTotal.length = 0;

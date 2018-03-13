@@ -1,10 +1,12 @@
 # NSS Single Page Applications: Sandwich Maker
 
+![Sandwich Maker](https://raw.githubusercontent.com/iiimosley/nss-spa-sandwich-maker/master/images/sandwich-maker.png "Sandwich Maker App")
+
 ### Goals
 * Further practice of modularity
 * Chaining series of events with DOM interactions
 * Compiling and manipulating data from multiple sources
-* Further practice of CSS3 FlexBox, SASS capabilities, & Responsive Design
+* Further practice of CSS3 FlexBox, SASS capabilities, & Responsive Design (adjust viewport to view changes)
 
 ### Directives
 Within `index.html`, static elements to be:

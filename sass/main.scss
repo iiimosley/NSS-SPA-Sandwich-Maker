@@ -44,6 +44,10 @@ input[type=number] {
     margin: .8em;
 }
 
+.none:checked {
+    background: url("https://cdn2.iconfinder.com/data/icons/picons-essentials/71/no-24.png");
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -148,7 +152,26 @@ button:active {
     h4, #breadWrap h4  {
         font-size: 4vw;
     }
-    .row > * {
+    label {
         font-size: 3vw;
+    }
+    input[type=checkbox]{
+        width: 4vw;
+        height: 4vw;
+    }
+    input[type=number] {
+        font-size: 3vw;
+    }
+    #breadWrap {
+        width: 70%;
+    }
+    #bread {
+        margin: 3vw auto;
+        font-size: 3.5vw;
+        width: 50%;
+        height: auto;
+    }
+    .noneWrap {
+        line-height: 2vw;
     }
 }
